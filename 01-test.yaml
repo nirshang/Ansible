@@ -3,5 +3,8 @@
   hosts: all
   become: true
   tasks: 
-   - name: ensure apache is at the latest version 
+   - name: ensure httpd is at the latest version 
      dnf: name=httpd state=latest
+
+   - name: ensure httpd server is started
+     systemd: name=httpd state=started
