@@ -4,13 +4,21 @@
   become: true
   tasks: 
    - name: ensure httpd is at the latest version 
-     dnf: name=httpd state=latest
+     dnf: 
+      name=httpd 
+      state=latest
 
    - name: ensure httpd server is started
-     systemd: name=httpd state=started
+     systemd: 
+      name=httpd 
+      state=started
 
    - name: ensure mariadb is at the latest version
-     dnf: name=mariadb-server state=latest
+     dnf: 
+      name=mariadb-server 
+      state=latest
 
    - name: ensure maiadb is started
-     systemd: name=mariadb state=started
+     systemd: 
+      name=mariadb 
+      state=started
