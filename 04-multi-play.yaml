@@ -1,7 +1,7 @@
 ---
 - name: PLAY1
   hosts: local
-  connections: local
+  connection: local
   tasks:
   - name: printing play1 and task1
     ansible.builtin.package:
@@ -9,7 +9,7 @@
 
 - name: PLAY2
   hosts: local
-  connections: local
+  connection: local
   tasks:
   - name: printing play2 and task2
     ansible.builtin.package:
