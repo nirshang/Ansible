@@ -11,4 +11,6 @@
 
    - name: ensure mariadb is at the latest version
      dnf: name=mariadb-server state=latest
-     
+
+   - name: ensure maiadb is started
+     systemd: name=mariadb state=started
