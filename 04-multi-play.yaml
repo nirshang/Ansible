@@ -4,7 +4,7 @@
   connection: local
   tasks:
   - name: printing play1 and task1
-    ansible.builtin.package:
+    ansible.builtin.debug:
       msg: "Hello Play1 and TASK1"
 
 - name: PLAY2
@@ -12,5 +12,5 @@
   connection: local
   tasks:
   - name: printing play2 and task2
-    ansible.builtin.package:
+    ansible.builtin.debug:
       msg: "Hello Play2 and TASK2"
