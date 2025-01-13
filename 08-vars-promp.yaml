@@ -7,6 +7,9 @@
     prompt: please enter the name of the COURSE
   - name: DURATION
     prompt: please enter the duration
+  - name: Traniner
+    prompt: please enter the trainer name
+    
   tasks:
   - name: printing variable from file
     ansible.builtin.debug:
