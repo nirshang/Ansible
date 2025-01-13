@@ -8,3 +8,7 @@
 
    - name: ensure httpd server is started
      systemd: name=httpd state=started
+
+   - name: ensure mariadb is at the latest version
+     dnf: name=mariadb-server state=latest
+     
