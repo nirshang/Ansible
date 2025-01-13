@@ -1,7 +1,6 @@
 ---
 - name: Variables
   hosts: all
-  connection: local
   vars:
     COURSE: Devops with AWS
     DURATION: 120HRS

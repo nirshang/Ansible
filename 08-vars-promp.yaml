@@ -1,7 +1,6 @@
 ---
 - name: print the Variables from prompt
   hosts: all
-  connection: local
   vars_prompt:
   - name: COURSE
     prompt: please enter the name of the course

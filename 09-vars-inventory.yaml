@@ -1,7 +1,6 @@
 ---
 - name: Printing Variables
   hosts: all
-  connection: local
   tasks:
   - name: print the Variables
     ansible.builtin.debug:
