@@ -1,7 +1,0 @@
----
-- name: Printing Variables
-  hosts: all
-  tasks:
-  - name: print the Variables
-    ansible.builtin.debug:
-      msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, Trainer is {{ TRAINER }}"
