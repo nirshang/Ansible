@@ -4,21 +4,21 @@
   become: true
   tasks: 
    - name: ensure httpd is at the latest version 
-     asible.builtin.dnf: 
+     dnf: 
       name=httpd 
       state=latest
 
    - name: ensure httpd server is started
-     ansible.builtin.systemd: 
+     systemd: 
       name=httpd 
       state=started
 
    - name: ensure mariadb is at the latest version
-     ansible.builtin.dnf: 
+     dnf: 
       name=mariadb-server 
       state=latest
 
    - name: ensure maiadb is started
-     ansible.builtin.systemd: 
+     systemd: 
       name=mariadb 
       state=started
