@@ -1,0 +1,14 @@
+---
+- name: installing multiple packages using loop
+  hosts: all
+  become: yes
+  tasks:
+  - name: installing package
+    ansible.builtin.package:
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
+    loop:
+    - { name: "mysql", state: "absent" }
+    - { name: "tree", state: "present" }
+    - { name: "zip", state: "absent" }
+    - { name: "httpd", state: "present" }
