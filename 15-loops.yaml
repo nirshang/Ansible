@@ -1,6 +1,6 @@
 ---
 - name: installing multiple packages using loop
-  hosts: web
+  hosts: all
   become: yes
   tasks:
   - name: installing package
