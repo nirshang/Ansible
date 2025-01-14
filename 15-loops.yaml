@@ -1,10 +1,10 @@
 ---
 - name: installing multiple packages using loop
-  hosts: all
+  hosts: web
   become: yes
   tasks:
   - name: installing package
-    ansible.builtin.service:
+    ansible.builtin.package:
       name: "{{ item }}"
       state: installed
     loop:
