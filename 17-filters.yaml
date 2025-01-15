@@ -26,5 +26,5 @@
   - name: convert Upper case 
     vars:
       name: "G. Latha BHAskar" 
-   ansible.builtin.debug:
-     msg: "Hello {{ name | upper }}"
+    ansible.builtin.debug:
+      msg: "Hello {{ name | upper }}"
