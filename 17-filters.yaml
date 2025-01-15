@@ -23,8 +23,8 @@
     ansible.builtin.debug:
      msg: "Hello {{ name | lower }}"
 
- - name: convert Upper case 
-   vars:
-     name: "G. Latha BHAskar" 
+  - name: convert Upper case 
+    vars:
+      name: "G. Latha BHAskar" 
    ansible.builtin.debug:
-    msg: "Hello {{ name | upper }}"
+     msg: "Hello {{ name | upper }}"
