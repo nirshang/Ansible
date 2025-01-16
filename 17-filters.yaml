@@ -34,3 +34,11 @@
      numbers: [54, 45, 5, 752, 547, 45874578, 488965]
     ansible.builtin.debug:
       msg: "Min is {{ numbers | min }} Max is {{ numbers | max }}"
+
+  - name: execute ls command in command module
+    ansible.builtin.command: ls -ltr
+    register: command_result
+
+  -name: print the output
+   ansible.builtin.debug:
+    msg: ls -ltr result is "{{ command_result }}"
