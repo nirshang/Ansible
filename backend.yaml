@@ -53,7 +53,7 @@
     loop:
     - PyMySQL
     - cryptography
-     
+
   - name: import mysql data
     community.mysql.mysql_db:
       state: import
@@ -63,6 +63,12 @@
       login_host: mysql.devopspractice.online
       target: /app/schema/backend.sql 
  
+  - name: deamon reload and restart service
+    ansible.builtin.systemd_service:
+     state: restarted
+     enabled: true
+     demon_reload: true
+     name: backend
  
  
  
