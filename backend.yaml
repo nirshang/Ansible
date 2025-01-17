@@ -65,8 +65,8 @@
  
   - name: deamon reload and restart service
     ansible.builtin.systemd_service:
-     state: restarted
      enabled: true
+     state: restarted
      demon_reload: true
      name: backend
  
