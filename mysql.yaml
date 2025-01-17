@@ -26,7 +26,12 @@
       login_host: mysql.devopspractice.online
     register: mysql_info 
     ignore_errors: true
-    
+
   - name: print the mysql_info output
     ansible.builtin.debug:
       msg: "mysql information: {{ mysql_info }}"
+
+  - name: set root password
+    ansible.builtin.command: "mysql_secure_installation --set-root-pass ExpenseApp@1"
+    when: mysql_info. failed is true
+    
