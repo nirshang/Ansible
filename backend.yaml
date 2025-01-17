@@ -46,11 +46,11 @@
      src: backend.service
      dest: /etc/systemd/system/backend.service
 
-  - name: import mysql data
-    community.mysql.mysql.db:
-      state: import
-      name: all
-      login_user: root
-      login_password: ExpenseApp@1
-      login_host: mysql.devopspractice.online
-      target: /app/schema/backend.sql
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
