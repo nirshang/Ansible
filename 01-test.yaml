@@ -3,12 +3,12 @@
   hosts: all
   become: true
   tasks:
-    - name: Ensure httpd and mariadb are at the latest version
+    - name: Ensure {{ service }} latest version
       ansible.builtin.dnf:
         name: "{{ service }}"
         state: latest
 
-    - name: Ensure httpd and mariadb services are started
+    - name: Ensure {{ service }} started
       ansible.builtin.systemd:
         name: "{{ service }}"
         state: started
