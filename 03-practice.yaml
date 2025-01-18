@@ -3,7 +3,7 @@
   hosts: web
   tasks:
   - name: save the output
-    ansible.builtin.shell: ls /home
+    ansible.builtin.shell: ls /home/ec2-user/Ansible
     register: homes
 
   - name: display the output
