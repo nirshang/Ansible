@@ -1,4 +1,3 @@
----
 - name: Checking latest versions of httpd
   hosts: all
   become: true
@@ -12,4 +11,3 @@
       ansible.builtin.systemd:
         name: httpd
         state: started
-      
