@@ -1,27 +1,19 @@
 ---
-- name: create 4 Users 
-  hosts: local
-  become: true 
+- name: Create 4 Users
+  hosts: web
+  become: true
   vars_files:
-   - vars.yaml
-- tasks:
-  - name: Ensure 'users' group exists
-    ansible.builtin.group:
-     name: users
-     state: present
+    - vars.yaml
 
-  - name: Create users using a loop
-    ansible.builtin.user:
-      name: "{{ item }}"
-      state: present
-      groups: "users"
-    loop: "{{ users }}"
-      
+  tasks:
+    - name: Ensure 'users' group exists
+      ansible.builtin.group:
+        name: users
+        state: present
 
-
-
-
-
-
-
-
+    - name: Create users using a loop
+      ansible.builtin.user:
+        name: "{{ item }}"
+        state: present
+        groups: "users"
+      loop: "{{ users }}"
