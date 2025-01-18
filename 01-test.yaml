@@ -1,24 +1,20 @@
 ---
-- name: checking latest version
-  hosts: all
+- name: checking latest versions of httpd and mariadb
+  hosts: web
   become: true
   tasks: 
    - name: ensure httpd is at the latest version 
-     dnf: 
-      name=httpd 
+     ansible.builtin.dnf: 
+      name="{{ item }}"
       state=latest
+    loop:
+    - httpd
+    - mariadb
 
    - name: ensure httpd server is started
-     systemd: 
-      name=httpd 
+     ansible.builtin.service:
+      name="{{ item }}" 
       state=started
-
-   - name: ensure mariadb is at the latest version
-     dnf: 
-      name=mariadb-server 
-      state=latest
-
-   - name: ensure maiadb is started
-     systemd: 
-      name=mariadb 
-      state=started
+    loop:
+    - httpd
+    - mariadb
