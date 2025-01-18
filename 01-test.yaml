@@ -1,13 +1,14 @@
+---
 - name: Checking latest versions of httpd
   hosts: all
   become: true
   tasks:
     - name: Ensure httpd and mariadb are at the latest version
       ansible.builtin.dnf:
-        name: httpd
+        name: "{{ service }}"
         state: latest
 
     - name: Ensure httpd and mariadb services are started
       ansible.builtin.systemd:
-        name: httpd
+        name: "{{ service }}"
         state: started
