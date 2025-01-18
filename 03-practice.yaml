@@ -3,9 +3,9 @@
   hosts: web
   tasks:
   - name: save the output
-    ansible.builtin.command: ls /home
+    ansible.builtin.shell: ls /home
     register: output_home
 
   - name: display the output
     ansible.builtin.debug:
-     msg: ls /home output is {{ output_home }}
+     var: ls /home output is output_home.stdout_lines
