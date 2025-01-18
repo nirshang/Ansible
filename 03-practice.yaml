@@ -4,8 +4,8 @@
   tasks:
   - name: save the output
     ansible.builtin.shell: ls /home
-    register: output_home
+    register: homes
 
   - name: display the output
     ansible.builtin.debug:
-     var: ls /home output is output_home.stdout_lines
+     var: home.stdout_lines[1]
