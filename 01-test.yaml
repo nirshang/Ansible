@@ -9,7 +9,7 @@
         state: latest
       loop:
         - httpd
-        - mariadb
+        - git
 
     - name: Ensure httpd and mariadb services are started
       ansible.builtin.systemd:
@@ -17,5 +17,5 @@
         state: started
       loop:
         - httpd
-        - mariadb
+        - git
  
