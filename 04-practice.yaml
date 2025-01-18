@@ -1,6 +1,6 @@
 ---
 - name: create 4 Users 
-  hosts: web
+  hosts: local
   become: true 
   vars_files:
    - vars.yaml
