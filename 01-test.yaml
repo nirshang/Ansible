@@ -5,17 +5,11 @@
   tasks:
     - name: Ensure httpd and mariadb are at the latest version
       ansible.builtin.dnf:
-        name: "{{ item }}"
+        name: httpd
         state: latest
-      loop:
-        - httpd
-        - git
 
     - name: Ensure httpd and mariadb services are started
       ansible.builtin.systemd:
-        name: "{{ item }}"
+        name: httpd
         state: started
-      loop:
-        - httpd
-        - git
- 
+      
