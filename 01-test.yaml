@@ -1,6 +1,6 @@
 ---
 - name: Checking latest versions of httpd and mariadb
-  hosts: web
+  hosts: all
   become: true
   tasks:
     - name: Ensure httpd and mariadb are at the latest version
