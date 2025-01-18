@@ -12,7 +12,7 @@
         - mariadb
 
     - name: Ensure httpd and mariadb services are started
-      ansible.builtin.service:
+      ansible.builtin.systemd:
         name: "{{ item }}"
         state: started
       loop:
