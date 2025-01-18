@@ -9,7 +9,7 @@
         state: latest
 
     - name: Ensure httpd and mariadb services are started
-      ansible.builtin.systemd:
+     ansible.builtin.systemd:
         name: httpd
         state: started
       
