@@ -1,6 +1,6 @@
 ---
 - name: save the command output
-  hosts: local
+  hosts: web
   tasks:
   - name: save the output
     ansible.builtin.shell: ls /home/ec2-user/Ansible/
