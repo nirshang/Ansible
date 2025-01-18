@@ -2,17 +2,13 @@
 - name: make sure apache is installed and started
   hosts: web
   become: true
-  vars: 
-    port_http: 80
-    service: 
-      rhel: httpd
   tasks:
   - name: make sure apache is installed
     ansible.builtin.dnf:
-      name: "{{ service.rhel }}"
+      name: "{{ service }}"
       state: "installed"
 
   - name: make sure apache is started
     ansible.builtin.systemd:
-      name: "{{ service.rhel }}"
+      name: "{{ service }}"
       state: "started"
