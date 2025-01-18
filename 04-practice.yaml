@@ -13,12 +13,8 @@
       name: "{{ item }}"
       state: present
       groups: "users"
-    loop:
-      - latha
-      - bhaskar
-      - nirshan
-      - ranhitha
-
+    loop: "{{ users }}"
+      
 
 
 
