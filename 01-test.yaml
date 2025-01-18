@@ -17,5 +17,5 @@
         state: started
       loop:
         - httpd
-        - mariadb
+        - mariadbd
  
