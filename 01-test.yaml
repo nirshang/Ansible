@@ -11,4 +11,5 @@
     - name: Ensure {{ service }} started
       ansible.builtin.systemd:
         name: "{{ service }}"
+        enabled: yes
         state: started
