@@ -3,13 +3,27 @@
   hosts: all
   become: true
   tasks: 
-  - name: creating users using loop:
+  - name: Ensure 'users' group exists
+    ansible.builtin.group:
+     name: users
+     state: present
+
+  - name: Create users using a loop
     ansible.builtin.user:
       name: "{{ item }}"
       state: present
       groups: "users"
     loop:
-     - latha
-     - bhaskar
-     - nirshan
-     - ranhitha
+      - latha
+      - bhaskar
+      - nirshan
+      - ranhitha
+
+
+
+
+
+
+
+
+
