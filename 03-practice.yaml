@@ -8,4 +8,4 @@
 
   - name: display the output
     ansible.builtin.debug:
-     var: homes.stdout_lines[0]
+     var: homes.stdout_lines
