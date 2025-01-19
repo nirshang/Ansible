@@ -1,6 +1,6 @@
 ---
 - name: print the directories
-  hosts: all
+  hosts: local
   tasks:
   - name: save the output
     ansible.builtin.shell: ls /home/ec2-user/Ansible/
