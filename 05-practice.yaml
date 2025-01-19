@@ -1,0 +1,12 @@
+---
+- name: print the directories
+  hosts: all
+  tasks:
+  - name: save the output
+    ansible.builtin.shell: ls /home/ec2-user/Ansible/
+    register: homes
+
+  - name: print the directories
+    ansible.builtin.debug:
+      msg: "Directory - {{ item }}"
+    loop: "{{ homes.stdout_lines }}" 
