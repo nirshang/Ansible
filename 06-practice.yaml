@@ -1,0 +1,7 @@
+---
+- name: "Reboot only Debian servers"
+  hosts: web
+  tasks:
+  - name: reboot servers"
+    ansible.builtin.reboot:
+    when: ansible_os_family == "Debian"
