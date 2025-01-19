@@ -13,5 +13,3 @@
       name: nginx
       enabled: yes
       state: started
-
-  - name: 
