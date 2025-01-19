@@ -1,0 +1,14 @@
+---
+- name: check if directory exists
+  ansible.builtin.stat:
+    path: /etc/ansible
+  register: directory
+
+  ansible.builtin.debug:
+    var: directory
+  
+  ansible.builtin.debug:
+    msg: The directory exists
+  when: 
+    - directory.stat.exists
+    - directory.stat.isdir
